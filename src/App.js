@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <NavBar/>   
-      <h1 className='title'>ENVÍOS A TODO EL PAÍS</h1>
+      <h2 className="title">ENVÍOS A TODO EL PAÍS</h2>
     </div>
   );
 }

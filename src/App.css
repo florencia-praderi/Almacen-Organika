@@ -2,7 +2,7 @@
 
 .App {
   text-align: center;
-  font-family: 'Zen Loop'
+  font-family: 'Zen Loop';
 }
 
 .App-logo {
@@ -32,7 +32,8 @@
 }
 
 .title {
-  color: #704f46
+  background-color: #704f46;
+  color: #ede6e4;
 }
 
 @keyframes App-logo-spin {
