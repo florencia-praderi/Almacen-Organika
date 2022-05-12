@@ -1,0 +1,31 @@
+.navbar{
+    background-color: white;
+    font-weight: bold;
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+.container-logo{
+    width: 150px;
+}
+
+.container-logo img {
+    width: 100%;
+}
+
+.btn {
+    color: #71996a;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;    
+    font-family: sans-serif;
+    margin: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: #704f46;
+    font-size: 20px;
+}
