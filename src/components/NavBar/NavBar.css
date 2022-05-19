@@ -1,23 +1,22 @@
 .navbar{
-    background-color: white;
+    background-color: #71996a;
     font-weight: bold;
-    float: left;
-    width: 100%;
+    width: auto;
     border-bottom: 1px solid #ccc;
 }
 
 .container-logo{
-    width: 150px;
+    width: 120px;
+
 }
 
 .container-logo img {
     width: 100%;
 }
 
-.btn {
-    color: #71996a;
-    background-color: transparent;
-    border: none;
+.btn-navbar {
+    align-items: center;
+    color: #eddea3;
     font-size: 18px;    
     font-family: sans-serif;
     margin: 20px;
@@ -25,7 +24,14 @@
     cursor: pointer;
 }
 
-.btn:hover {
-    color: #704f46;
-    font-size: 20px;
+.btn-navbar:hover {
+    color: #ebceac;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.btn-cart {
+    position: relative;
+    padding-right: 0;
+    float: right;
 }

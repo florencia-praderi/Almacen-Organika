@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600&family=Zen+Loop:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600&family=Zen+Loop:ital@0;1&display=swap');
+
 
 .App {
   text-align: center;
@@ -8,6 +10,11 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.general-container {
+  width: 100%;
+  margin: auto;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -31,9 +38,18 @@
   color: #61dafb;
 }
 
-.title {
+.banner-header {
   background-color: #704f46;
+  width: 100%;
+  font-family: 'Zen Loop';
+  font-size: 25px;
+  font-weight: bold;
   color: #ede6e4;
+  margin-top: 0px;
+}
+.banner-header:hover{
+  cursor: pointer;
+  text-transform: capitalize;
 }
 
 @keyframes App-logo-spin {

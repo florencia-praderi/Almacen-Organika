@@ -2,6 +2,9 @@ import './NavBar.css'
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
+import { createTheme } from '@mui/material/styles';
+import ShoppingCartIcon from '../CartWidget/CartWidget';
+import Typography from '@mui/material/Typography';
 
 //UpperCamelCase
 const NavBar = ()=>{
@@ -9,16 +12,24 @@ const NavBar = ()=>{
             <AppBar position="static">
                 <Toolbar className="navbar">
                     <div className="container-logo">
-                    <img src="./LogoAlmacen.png"/>
+                    <img src="./Logo-Almacen.png"/>
                     </div>
                     <div>
-                        <button className="btn">Home</button>
-                        <button className="btn">Shop</button>
-                        <button className="btn">Contacto</button>                        
+                        <Button className='btn-navbar' color='secondary'>Home</Button>
+                        <Button className='btn-navbar' color='secondary'>Shop</Button>
+                        <Button className='btn-navbar' color='secondary'>Contacto</Button>     
+                        <Button className='btn-navbar' color='secondary'>Login</Button>                                     
                     </div>
-                    <Button>Login</Button>
+                    <Typography sx={{ flexGrow: 2}}>
+                    <div className='btn-cart' >
+                        <Button color='secondary'>
+                            <ShoppingCartIcon />
+                        </Button>                        
+                    </div>
+                    </Typography>
                 </Toolbar>
             </AppBar>
     )
 }
+
 export default NavBar
