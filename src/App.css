@@ -49,7 +49,7 @@
 }
 .banner-header:hover{
   cursor: pointer;
-  text-transform: capitalize;
+  letter-spacing: .6px;
 }
 
 @keyframes App-logo-spin {

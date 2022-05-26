@@ -26,7 +26,7 @@
 
 .btn-navbar:hover {
     color: #ebceac;
-    text-decoration: underline;
+    letter-spacing: 1px;
     font-weight: bold;
 }
 

@@ -3,14 +3,14 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Dialog from '@mui/material/Dialog';
 import { DialogContent } from '@mui/material';
 
-const Modal = ({handleClose, open, children})=>{
+const ModalCarrito = ({handleClose, open, children})=>{
     return(
         <Dialog onClose={handleClose} open={open}>
             <DialogContent>
-            Modal
+                {children}
             </DialogContent>
         </Dialog>
     )
 }
 
-export default Modal
+export default ModalCarrito

@@ -15,17 +15,15 @@ const NavBar = ()=>{
                     <img src="./Logo-Almacen.png"/>
                     </div>
                     <div>
-                        <Button className='btn-navbar' color='secondary'>Home</Button>
-                        <Button className='btn-navbar' color='secondary'>Shop</Button>
-                        <Button className='btn-navbar' color='secondary'>Contacto</Button>     
-                        <Button className='btn-navbar' color='secondary'>Login</Button>                                     
+                        <Button className='btn-navbar' color='inherit'>Home</Button>
+                        <Button className='btn-navbar' color='inherit'>Shop</Button>
+                        <Button className='btn-navbar' color='inherit'>Contacto</Button>     
+                        <Button className='btn-navbar' color='inherit'>Login</Button>                                     
                     </div>
                     <Typography sx={{ flexGrow: 2}}>
-                    <div className='btn-cart' >
-                        <Button color='secondary'>
+                        <Button className='btn-cart' color='inherit'>
                             <ShoppingCartIcon />
                         </Button>                        
-                    </div>
                     </Typography>
                 </Toolbar>
             </AppBar>
