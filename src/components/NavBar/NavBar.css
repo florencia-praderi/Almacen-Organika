@@ -17,11 +17,10 @@
 .btn-navbar {
     align-items: center;
     color: #eddea3;
-    font-size: 18px;    
+    font-size: 15px;    
     font-family: sans-serif;
-    margin: 20px;
-    padding: 10px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .btn-navbar:hover {

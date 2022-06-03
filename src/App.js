@@ -1,22 +1,29 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar'
-import Button from '@mui/material/Button';
-import CardItem  from './components/Card/Card'
-import CardList from './components/CardList/CardList'
-import { Container, Grid } from '@mui/material'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {ThemeProvider} from '@mui/material/styles';
 import theme from './theme';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import Home from './pages/Home';
+import Detail from './pages/Detail'
+import Catalog from './pages/Catalog'
+import NotFound from './pages/NotFound'
+import Contact from './pages/Contact'
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
     <div className="App">
+      <BrowserRouter>
       <NavBar/>   
-      <button className='banner-header'>¡Con tarjetas Santander tenes hasta un 15% de descuento! *Hacé click acá para conocer más detalles</button>
-      <div className='general-container'>
-      <ItemListContainer/>       
-      </div>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/product/:id' element={<Detail/>}/>
+        <Route path='/product/:category' element={<Catalog/>}/>
+        <Route path='/contacto' element={<Contact/>}/>
+        <Route path='*' element={<NotFound/>}/>
+      </Routes>
+      </BrowserRouter>
     </div>
     </ThemeProvider>
   );

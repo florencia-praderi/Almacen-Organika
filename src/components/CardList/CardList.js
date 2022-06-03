@@ -5,16 +5,15 @@ import { useState, useEffect } from 'react'
 const CardList = ({title, products})=>{
 
     return(
-        //Especias
         <>
+        <h2>{title}</h2>
         {console.log("state products: ", products)}
         <Grid container spacing={3}>
             {
-                products.map( ({title, price, image, id}, index)=>{
-                    console.log(index)
+                products.map( ({title, price, image, id})=>{
                     return (
                             <Grid item md={4} key={id}>
-                                <CardItem title={title} price={price} image={image}/>
+                                <CardItem title={title} price={price} image={image} id={id}/>
                             </Grid>
                     )
                 })

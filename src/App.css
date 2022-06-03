@@ -52,6 +52,55 @@
   letter-spacing: .6px;
 }
 
+.item-detail img {
+  margin-top: 5px;
+  width: 300px;
+  height: 350px;
+}
+
+.item-detail {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: 'Dosis', sans-serif;
+}
+
+
+.item-detail h2, p {
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #704f46;
+}
+
+.item-detail span {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #71996a;
+}
+
+.title {
+  font-family: 'Dosis', sans-serif;
+  color: #704f46;
+}
+
+.contact_container {
+  display: inline-flex;
+  justify-content: left;
+  font-family: 'Dosis', sans-serif;
+  color: #704f46;
+  margin-left: 10px;
+}
+
+.contact_form label {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Dosis', sans-serif;
+  color: #704f46;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

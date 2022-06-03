@@ -38,3 +38,9 @@
     display: flex;
     flex-direction: row;
 }
+
+.detail-btn {
+    text-decoration: none;
+    color: #71996a;
+    font-weight: bold;
+}

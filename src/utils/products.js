@@ -1,77 +1,96 @@
 
 const productos = [
     {
-        title : 'Adobo con Ajo 50g',
+        title : 'Adobo con Ajo',
         price : 30,
         image : 'adoboconajo.png',
-        description : '',
+        description : 'Adobo con Ajo 50g',
+        category : 'especias',
         stock : 122,
         id : 1
     },
     {
-        title : 'Aji Molido 50g',
+        title : 'Aji Molido',
         price : 35,
         image : 'ajomolido.png',
-        description : '',
+        description : 'Aji Molido 50g',
+        category : 'especias',
         stock : 250,
         id : 2
     },
     {
-        title : 'Ajo y Perejil 50g',
+        title : 'Ajo y Perejil',
         price : 34,
         image : 'ajoyperejil.png',
-        description : '',
+        description : 'Ajo y Perejil 50g',
+        category : 'especias',
         stock : 250,
         id : 3
     },
     {
-        title : 'Cebolla Roja Triturada 25g',
+        title : 'Cebolla Roja Triturada',
         price : 36,
         image : 'cebolla.png',
-        description : '',
+        description : 'Cebolla Roja Triturada 25g',
+        category : 'condimentos',
         stock : 300,
         id : 4
     },
     {
-        title : 'Ciboulette 25g',
+        title : 'Ciboulette',
         price : 72,
         image : 'ciboulette.png',
-        description : '',
+        description : 'Ciboulette 25g',
+        category : 'condimentos',
         stock : 197,
         id : 5
     },
     {
-        title : 'Curry 7 mares 25g',
+        title : 'Curry 7 mares',
         price : 46,
         image : 'curry.png',
-        description : '',
+        description : 'Curry 7 mares 25g',
+        category : 'condimentos',
         stock : 49,
         id : 6
     },
     {
-        title : 'Hinojo 50g',
+        title : 'Hinojo',
         price : 45,
         image : 'hinojo.png',
-        description : '',
+        description : 'Hinojo 50g',
+        category : 'condimentos',
         stock : 88,
         id : 7
     },
     {
-        title : 'Salvia 25g',
+        title : 'Salvia',
         price : 36,
         image : 'salvia.png',
-        description : '',
+        description : 'Salvia 25g',
+        category : 'aromaticas',
         stock : 202,
         id : 8
     },
     {
-        title : 'Tandoori 25g',
+        title : 'Tandoori',
         price : 48,
         image : 'tandoori.png',
-        description : '',
+        description : 'Tandoori 25g',
+        category : 'aromaticas',
         stock : 92,
         id : 9
     },
 ]
 
+const producto = {
+    title : 'Adobo con Ajo',
+    price : 30,
+    image : 'adoboconajo.png',
+    description : 'Adobo con Ajo 50g',
+    stock : 122,
+    id : 1
+    }
+
 export default productos
+export {producto}
