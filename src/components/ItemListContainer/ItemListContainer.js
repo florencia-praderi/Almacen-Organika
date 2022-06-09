@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import CardList from '../CardList/CardList';
-import productos from '../../utils/products';
+import productos from '../../utils/productsMock';
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = ()=>{
     const [products, setProducts] = useState([])
+    const {category} = useParams()
 
     const getProducts = () => {
         return new Promise((resolve, reject) => {
@@ -18,15 +20,15 @@ const ItemListContainer = ()=>{
             //console.log('resolved', res);
             setProducts(res)
         })
-        .catch((err) => {
+        //.catch((err) => {
             //console.log('rejected', err);
-        })
-        .finally(() => {
+        //})
+        //.finally(() => {
             //console.log('finalizado');
-        })
+        //})
     },[])
     return (
-        <CardList products={productos}/>
+        <CardList products={products}/>
     )
 }
 

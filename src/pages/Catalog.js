@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import CardList from '../components/CardList/CardList'
-import productos from '../utils/products'
+import productos from '../utils/productsMock'
 
 const Catalog = ()=>{
     const [products, setProducts] = useState([])
     const {category} = useParams()
 
     useEffect (()=>{
-        setProducts([])
         getProducts()
         .then ((res)=>{
+            setProducts([])
             filterByCat(res)
         })
     }, [category])
@@ -21,7 +21,7 @@ const Catalog = ()=>{
         })
     }
     const filterByCat = (array)=>{
-        return array.map((item)=>{
+        return array.find((item)=>{
             if (item.category == category){
                 return setProducts(products => [...products, item])
             }

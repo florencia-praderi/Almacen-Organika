@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import productos from '../../utils/products'
+import productos from '../../utils/productsMock'
 import { useParams } from "react-router-dom"
 import ItemDetail from '../ItemDetail/ItemDetail'
 
@@ -8,15 +8,15 @@ const ItemDetailContainer = () => {
     const [product, setProduct] = useState({})
 
     useEffect (()=>{
+        const productFilter = productos.find((product) => {
+            return product.id === parseInt(id);
+        })
         setProduct(productFilter)
-    }, [id])
-    const productFilter = productos.find( (product) => {
-        return product.id == id
-    })
+    },[id])
 
     return(
         <>
-            <ItemDetail data={product}/>
+        {product && <ItemDetail data={product}/>}
         </>
     )
 }

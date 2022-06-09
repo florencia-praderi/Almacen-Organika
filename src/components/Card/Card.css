@@ -40,7 +40,22 @@
 }
 
 .detail-btn {
+        font-family: 'Dosis', sans-serif;
+    text-transform: none;
     text-decoration: none;
-    color: #71996a;
     font-weight: bold;
+    background-color: #71996a;
+    color: #eddea3;
+    width: 100%;
+}
+
+.card-item-btn {
+    font-family: 'Dosis', sans-serif;
+    text-transform: none;
+    background-color: #704f46;
+    color: #eddea3;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 5px;
+    width: 100%;
 }

@@ -1,23 +1,26 @@
 import '../Card/Card'
-import { useState } from "react";
 import { Button } from "@mui/material";
 
 
-const ItemCount = ()=>{
-    const [count, setCount] = useState(0)
-    const addCount = ()=>{
-        setCount(count + 1)
+const ItemCount = ({cantidad, setCantidad, setShowButton})=>{
+
+
+    const addProduct = ()=>{
+        setCantidad(cantidad + 1)
     }   
-    const subCount = ()=>{
-        setCount(count - 1)
+    const subProduct = ()=>{
+        setCantidad(cantidad - 1)
     }
     
     return(
+        <>
         <div className='count-item-align'>
-            <Button onClick={subCount} disabled={count==0}>-</Button>
-            <p>{count}</p>
-            <Button onClick={addCount}>+</Button>
+            <Button onClick={subProduct} disabled={cantidad==0}>-</Button>
+            <p>{cantidad}</p>
+            <Button onClick={addProduct}>+</Button>
+                    <Button variant='contained' color='primary' onClick={()=>setShowButton(true)}>Agregar producto</Button>
         </div>
+        </>
     )
 }
 
