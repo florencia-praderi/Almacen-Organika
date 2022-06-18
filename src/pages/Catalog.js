@@ -1,25 +1,39 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import CardList from '../components/CardList/CardList'
-import productos from '../utils/productsMock'
+import { collection, getDocs } from "firebase/firestore";
+import db from '../utils/firebaseConfig'
+
 
 const Catalog = ()=>{
     const [products, setProducts] = useState([])
     const {category} = useParams()
 
     useEffect (()=>{
+        setProducts([])
         getProducts()
-        .then ((res)=>{
-            setProducts([])
-            filterByCat(res)
+        .then ((productos)=>{
+            category ? filterByCat(productos, category) : setProducts(productos)
         })
     }, [category])
 
-    const getProducts = ()=>{
-        return new Promise ((resolve, reject)=>{
-            resolve (productos)
+    //const getProducts = ()=>{
+    //    return new Promise ((resolve, reject)=>{
+    //        resolve (productos)
+    //    })
+    //}
+
+    const getProducts = async ()=>{
+        const productSnapshot = await getDocs(collection(db, "productos"));
+        const catalog = productSnapshot.docs.map((doc)=>{
+            let product = doc.data()
+            product.id = doc.id
+            console.log("doc:", doc)
+            return doc.data()
         })
+        return catalog
     }
+
     const filterByCat = (array)=>{
         return array.find((item)=>{
             if (item.category == category){

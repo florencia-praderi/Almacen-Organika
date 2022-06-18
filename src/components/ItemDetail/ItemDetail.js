@@ -2,6 +2,7 @@ import { Button } from "@mui/material"
 import ItemCount from "../ItemCount/ItemCount"
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import Loader from "../Loader/Loader"
 
 const ItemDetail = ({data}) => {
 
@@ -11,7 +12,6 @@ const ItemDetail = ({data}) => {
     const addProductToCart = () =>{
         console.log("Producto agregado al carro: ", data)
         console.log("Cantidad" , cantidad)
-
     }
 
     return (
@@ -28,10 +28,10 @@ const ItemDetail = ({data}) => {
             cantidad={cantidad} 
             setShowButton={setShowButton}
             setCantidad={setCantidad}/>:
-            <Button variant='outlined' color='primary'><Link to={'/cart'}>Finalizar compra</Link></Button>}
+            <Button variant='outlined' style={{backgroundColor: '#704f46'}}><Link to={'/cart'} style={{color: 'white', textDecoration: 'none'}}>Finalizar compra</Link></Button>}
         </div> 
         <div>
-        <Button variant='contained' color='primary' onClick={addProductToCart()}>Seguir comprando</Button>  
+        <Button variant='contained' style={{backgroundColor: '#71996a'}} onClick={addProductToCart()}><Link to={'/shop'} style={{color: 'white', textDecoration: 'none'}}>Seguir comprando</Link></Button> 
         </div>
         </div>  
         </>

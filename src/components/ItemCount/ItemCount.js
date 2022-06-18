@@ -18,7 +18,7 @@ const ItemCount = ({cantidad, setCantidad, setShowButton})=>{
             <Button onClick={subProduct} disabled={cantidad==0}>-</Button>
             <p>{cantidad}</p>
             <Button onClick={addProduct}>+</Button>
-                    <Button variant='contained' color='primary' onClick={()=>setShowButton(true)}>Agregar producto</Button>
+                    <Button variant='contained' style={{backgroundColor: '#704f46'}} onClick={()=>setShowButton(true)}>Agregar producto</Button>
         </div>
         </>
     )

@@ -5,9 +5,25 @@ import Button from '@mui/material/Button';
 import ShoppingCartIcon from '../CartWidget/CartWidget';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import { useState } from 'react';
 
 //UpperCamelCase
 const NavBar = ()=>{
+
+    const [anchorEl, setAnchorEl] = useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
+    const categories = ["especias", "condimentos", "aromaticas"]
+
 
     return (
             <AppBar position="static">
@@ -18,7 +34,29 @@ const NavBar = ()=>{
                     <div>
                         <Button color='secondary'>
                             <Link to={'/'} className='btn-navbar'>Home</Link></Button>
-                        <Button><Link to={'/shop'} className='btn-navbar'>Shop</Link></Button>
+                        <Button                             
+                            id="basic-button"
+                            aria-controls={open ? 'basic-menu' : undefined}
+                            aria-haspopup="true"
+                            aria-expanded={open ? 'true' : undefined}
+                            onClick={handleClick}
+                            disableRipple
+                            style={{ backgroundColor: 'transparent', color: '#eddea3' }} 
+                            variant='text' 
+                            className='btn-navbar'>Shop</Button>
+                        <Menu
+                            id="basic-menu"
+                            anchorEl={anchorEl}
+                            open={open}
+                            onClose={handleClose}
+                            MenuListProps={{
+                            'aria-labelledby': 'basic-button',
+                            }}
+                        >
+                            {categories.map( (cat) => {
+                                return <MenuItem onClick={handleClose}><Link to={`/products/${cat}`} className='btn-navbar'>{cat}</Link></MenuItem>
+                            })}
+                        </Menu>
                         <Button color='secondary'>
                             <Link to={'/contacto'} className='btn-navbar'>Contacto</Link></Button>                                     
                     </div>

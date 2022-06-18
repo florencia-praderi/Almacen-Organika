@@ -5,6 +5,7 @@
 .App {
   text-align: center;
   font-family: 'Zen Loop';
+  font-size: 26px;
 }
 
 .App-logo {
@@ -100,6 +101,59 @@
   font-family: 'Dosis', sans-serif;
   color: #704f46;
 }
+
+.col-cart-table__head {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+
+.col-cart-table__head h2 {
+  font-size: 14px;
+  width: 20%;
+}
+
+.cart-table__content {
+  display: flex;
+}
+.cart-table__content img {
+  width: 250px;
+}
+
+.cart-table__content-title {
+  width: 30%;
+}
+
+.cart-table__content-price, .cart-table__content-quantity {
+  width: 20%;
+}
+.cart-table__content > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+}
+
+.cart-table__content-title {
+  flex-direction: column;
+}
+
+.cart-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-checkout-details button {    
+  font-family: 'Dosis', sans-serif;
+  text-transform: none;
+  background-color: #704f46;
+  color: #eddea3;
+  font-weight: bold;
+  border-radius: 25px;
+  padding: 8px;
+  width: 100%;
+} 
+
 
 @keyframes App-logo-spin {
   from {

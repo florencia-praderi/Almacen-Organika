@@ -6,11 +6,12 @@ import ItemCount from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
 import CartContext from '../context/CartContext'
 import { useContext } from 'react';
+import Loader from '../Loader/Loader';
 
 //Functional component
 const CardItem = ({image, title, price, id})=> {
     const {addProductToCart} = useContext(CartContext)
-
+    
     return (
     <Card sx={{ minWidth: 275 }}>
         <CardContent>
@@ -21,12 +22,12 @@ const CardItem = ({image, title, price, id})=> {
             <p>{title}</p>
             <span>$ {price}</span>      
             <div>          
-            <Button variant='contained' className="card-item-btn" onClick={()=>addProductToCart({image, title, price, id})}>
+            <Button variant='contained' className="card-item-btn" style={{backgroundColor: '#704f46'}} onClick={()=>addProductToCart({image, title, price, id})}>
                 Agregar al carrito
             </Button>
             </div><span></span>   
             <div>
-            <Button variant='contained' className="detail-btn"><Link to={`/product/${id}`} className="detail-btn">Detalle</Link></Button>
+            <Button variant='contained' className="detail-btn" style={{backgroundColor: '#71996a'}}><Link to={`/product/${id}`} style={{textDecoration: 'none', color: '#eddea3'}}>Detalle</Link></Button>
             </div>
         </div>
         </CardContent>
