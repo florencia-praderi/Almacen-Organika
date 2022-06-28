@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import ItemCount from "../ItemCount/ItemCount";
 
 const CartContext = createContext()
 
@@ -10,15 +11,27 @@ const CartProvider = ({children})=>{
         let isInCart = cartListItems.find (cartItem=> cartItem.id === product.id)
         if (!isInCart){
             console.log("se agrego el producto:", product)
-            setTotalPrice(totalPrice + product.price)
+            setTotalPrice(totalPrice +  product.price)
             return setCartListItems(cartListItems=>[...cartListItems, product])
         }
-        console.log("El producto ya se encuentra en el carrito")
     }
+
+    const deleteProduct = (product) => {
+        setCartListItems(cartListItems.filter( (cartProduct) => cartProduct.id !== product.id) )
+        console.log("producto eliminado", product)
+    }
+
+    const cleanCartProducts = ()=>{
+        setTotalPrice(0)
+        setCartListItems([])
+    }
+
     const data = {
         cartListItems,
         addProductToCart,
-        totalPrice
+        totalPrice,
+        cleanCartProducts,
+        deleteProduct
     }
     return(
         <CartContext.Provider value={data}>

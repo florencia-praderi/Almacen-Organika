@@ -2,7 +2,7 @@ import './NavBar.css'
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
-import ShoppingCartIcon from '../CartWidget/CartWidget';
+import CartWidget from '../CartWidget/CartWidget';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 import Menu from '@mui/material/Menu';
@@ -22,7 +22,7 @@ const NavBar = ()=>{
         setAnchorEl(null);
     };
 
-    const categories = ["especias", "condimentos", "aromaticas"]
+    const categories = ["Especias", "Condimentos", "Aromáticas"]
 
 
     return (
@@ -58,11 +58,11 @@ const NavBar = ()=>{
                             })}
                         </Menu>
                         <Button color='secondary'>
-                            <Link to={'/contacto'} className='btn-navbar'>Contacto</Link></Button>                                     
+                            <Link to={'/contact'} className='btn-navbar'>Contact</Link></Button>                                     
                     </div>
                     <Typography sx={{ flexGrow: 2}}>
                         <Button className='btn-cart' >
-                            <Link to={'/cart'}><ShoppingCartIcon/></Link>
+                        <CartWidget />
                         </Button>                        
                     </Typography>
                 </Toolbar>

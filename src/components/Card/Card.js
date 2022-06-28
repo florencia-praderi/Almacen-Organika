@@ -2,7 +2,6 @@ import './Card.css'
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { Button } from '@mui/material';
-import ItemCount from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
 import CartContext from '../context/CartContext'
 import { useContext } from 'react';
@@ -27,7 +26,9 @@ const CardItem = ({image, title, price, id})=> {
             </Button>
             </div><span></span>   
             <div>
-            <Button variant='contained' className="detail-btn" style={{backgroundColor: '#71996a'}}><Link to={`/product/${id}`} style={{textDecoration: 'none', color: '#eddea3'}}>Detalle</Link></Button>
+            <Button variant='contained' className="detail-btn" style={{backgroundColor: '#71996a'}}>
+                <Link to={`/product/${id}`} style={{textDecoration: 'none', color: '#eddea3'}}>Detalle</Link>
+            </Button>
             </div>
         </div>
         </CardContent>

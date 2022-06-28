@@ -17,19 +17,12 @@ const Catalog = ()=>{
         })
     }, [category])
 
-    //const getProducts = ()=>{
-    //    return new Promise ((resolve, reject)=>{
-    //        resolve (productos)
-    //    })
-    //}
-
     const getProducts = async ()=>{
         const productSnapshot = await getDocs(collection(db, "productos"));
         const catalog = productSnapshot.docs.map((doc)=>{
             let product = doc.data()
             product.id = doc.id
-            console.log("doc:", doc)
-            return doc.data()
+            return product
         })
         return catalog
     }

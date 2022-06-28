@@ -7,7 +7,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { Link } from 'react-router-dom';
 
 const CartWidget = () =>{
-    const {cartListItems} = useContext(CartContext)
+    const {cartListItems, deleteProduct} = useContext(CartContext)
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -52,14 +52,18 @@ const CartWidget = () =>{
                             <span>$ {item.price}</span>
                         </div>
                         <div className='cart-prod__action'>
-                            <button>
+                            <button onClick={() => deleteProduct(item)}>
                                 <DeleteIcon />
                             </button>
                         </div>
                     </div>
                     )
                 })}
-                
+                <div className='cart-checkout-details'>
+                        <Link to="/cart">
+                            <button style={{cursor: 'pointer'}} onClick={handleClose}>Terminar compra</button>
+                        </Link>
+                    </div>
             </div>
         </Menu>
     </div>

@@ -53,6 +53,19 @@
   letter-spacing: .6px;
 }
 
+.btn-custom {
+  font-family: 'Dosis', sans-serif;
+  font-size: 15px;
+  text-transform: none;
+  background-color: #704f46;
+  color: #eddea3;
+  font-weight: bold;
+  border-radius: 25px;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px;
+}
+
 .item-detail img {
   margin-top: 5px;
   width: 300px;
@@ -87,19 +100,39 @@
 }
 
 .contact_container {
-  display: inline-flex;
-  justify-content: left;
+  display: flex;
+  justify-content: center;
   font-family: 'Dosis', sans-serif;
   color: #704f46;
   margin-left: 10px;
 }
 
-.contact_form label {
-  display: inline-flex;
+
+form.contact_form {
+  display: flex;
   flex-direction: column;
-  justify-content: center;
   font-family: 'Dosis', sans-serif;
+  justify-content: center;
+  align-items: center;
   color: #704f46;
+}
+
+form.contact_form > div {
+  margin-bottom: 15px;
+  width: 300px;
+}
+
+form.contact_form > input {
+  font-family: 'Dosis', sans-serif;
+  font-size: large;
+  text-transform: none;
+  background-color: #704f46;
+  color: #eddea3;
+  font-weight: bold;
+  border-radius: 25px;
+  padding: 8px;
+  width: 200px;
+  cursor: pointer;
 }
 
 .col-cart-table__head {

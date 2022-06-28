@@ -5,7 +5,7 @@ const productos = [
         price : 30,
         image : 'adoboconajo.png',
         description : 'Adobo con Ajo 50g',
-        category : 'especias',
+        category : 'Especias',
         stock : 122,
         id : 1
     },
@@ -14,7 +14,7 @@ const productos = [
         price : 35,
         image : 'ajomolido.png',
         description : 'Aji Molido 50g',
-        category : 'especias',
+        category : 'Especias',
         stock : 250,
         id : 2
     },
@@ -23,7 +23,7 @@ const productos = [
         price : 34,
         image : 'ajoyperejil.png',
         description : 'Ajo y Perejil 50g',
-        category : 'especias',
+        category : 'Especias',
         stock : 250,
         id : 3
     },
@@ -32,7 +32,7 @@ const productos = [
         price : 36,
         image : 'cebolla.png',
         description : 'Cebolla Roja Triturada 25g',
-        category : 'condimentos',
+        category : 'Condimentos',
         stock : 300,
         id : 4
     },
@@ -41,7 +41,7 @@ const productos = [
         price : 72,
         image : 'ciboulette.png',
         description : 'Ciboulette 25g',
-        category : 'condimentos',
+        category : 'Condimentos',
         stock : 197,
         id : 5
     },
@@ -50,7 +50,7 @@ const productos = [
         price : 46,
         image : 'curry.png',
         description : 'Curry 7 mares 25g',
-        category : 'condimentos',
+        category : 'Condimentos',
         stock : 49,
         id : 6
     },
@@ -59,7 +59,7 @@ const productos = [
         price : 45,
         image : 'hinojo.png',
         description : 'Hinojo 50g',
-        category : 'condimentos',
+        category : 'Condimentos',
         stock : 88,
         id : 7
     },
@@ -68,7 +68,7 @@ const productos = [
         price : 36,
         image : 'salvia.png',
         description : 'Salvia 25g',
-        category : 'aromaticas',
+        category : 'Aromáticas',
         stock : 202,
         id : 8
     },
@@ -77,7 +77,7 @@ const productos = [
         price : 48,
         image : 'tandoori.png',
         description : 'Tandoori 25g',
-        category : 'aromaticas',
+        category : 'Aromáticas',
         stock : 92,
         id : 9
     },
