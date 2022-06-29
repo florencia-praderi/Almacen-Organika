@@ -37,7 +37,9 @@ const Catalog = ()=>{
 
     return (
         <div className='general-container'>
-            <CardList title={'Catalogo de productos'} products={products}/>
+            <div className='title'>
+            <CardList title={'Catálogo de productos'} products={products}/>
+            </div>
         </div>
     )
 }

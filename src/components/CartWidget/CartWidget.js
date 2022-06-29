@@ -5,10 +5,14 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { Link } from 'react-router-dom';
+import { Button } from '@mui/material';
+import { ToastContainer, toast } from 'material-react-toastify';
+import 'material-react-toastify/dist/ReactToastify.css';
 
 const CartWidget = () =>{
     const {cartListItems, deleteProduct} = useContext(CartContext)
     const [anchorEl, setAnchorEl] = useState(null);
+    const notify = () => toast.error("Producto eliminado");
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
@@ -52,18 +56,21 @@ const CartWidget = () =>{
                             <span>$ {item.price}</span>
                         </div>
                         <div className='cart-prod__action'>
-                            <button onClick={() => deleteProduct(item)}>
+                            <button onClick={() => {
+                                deleteProduct(item);
+                                notify()}}>
                                 <DeleteIcon />
+                                <ToastContainer />
                             </button>
+                        </div>
+                        <div className='cart-checkout-details'>
+                            <Button style={{cursor: 'pointer'}} onClick={handleClose}>
+                                <Link to="/cart" style={{textDecoration: 'none', color: 'white'}}>Terminar compra</Link>
+                            </Button>
                         </div>
                     </div>
                     )
                 })}
-                <div className='cart-checkout-details'>
-                        <Link to="/cart">
-                            <button style={{cursor: 'pointer'}} onClick={handleClose}>Terminar compra</button>
-                        </Link>
-                    </div>
             </div>
         </Menu>
     </div>

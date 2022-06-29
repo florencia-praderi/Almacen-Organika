@@ -16,6 +16,7 @@
 .general-container {
   width: 100%;
   margin: auto;
+  
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -46,12 +47,86 @@
   font-size: 25px;
   font-weight: bold;
   color: #ede6e4;
-  margin-top: 0px;
 }
 .banner-header:hover{
   cursor: pointer;
   letter-spacing: .6px;
 }
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  background-image: url(https://www.pilarica.es/wp-content/uploads/2019/05/masala-4096891_1280.jpg);
+  justify-content: left;
+}
+
+.home-container h1 {
+  color: #704f46;
+  font-weight: bold 
+}
+
+.home-container h2 {
+  color: #71996a;
+  text-transform: uppercase;
+  font-family: 'Dosis', sans-serif;
+}
+
+.home-btn {
+  font-family: 'Dosis', sans-serif;
+  font-size: 15px;
+  text-transform: none;
+  background-color: #71996a;
+  color: #eddea3;
+  font-weight: bold;
+  border-radius: 25px;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.home-btn:hover{
+  cursor: pointer;
+  border: 2px solid #71996a;
+}
+
+.help-btn {
+  align-content: right;
+  color: white;
+  font-family: 'Dosis', sans-serif;
+  font-size: 10px;
+  background-color: #71996a;
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer
+}
+
+.home-container2 {
+  display: flex;
+  flex-direction: row;
+}
+
+.home-container2-img {
+  margin: 30px;
+  width: auto;
+}
+
+.home-container2 h2 {
+  margin-bottom: 10px;
+  font-size: 35px;
+  font-weight: bold;
+  color: #71996a;
+}
+
+.home-container2 p {
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #704f46;
+}
+
 
 .btn-custom {
   font-family: 'Dosis', sans-serif;

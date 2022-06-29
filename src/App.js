@@ -10,6 +10,7 @@ import FindUs from './pages/FindUs'
 import Cart from './pages/Cart'
 import Shop from './pages/Shop'
 import { CartProvider } from './components/context/CartContext';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path='/cart' element={<Cart/>}/>
         <Route path='*' element={<NotFound/>}/>
       </Routes>
+      <Footer/>
       </BrowserRouter>
     </ThemeProvider>
     </CartProvider>

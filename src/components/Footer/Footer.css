@@ -1,0 +1,17 @@
+.footer-container {
+    background-color: #704f46;
+    height: auto;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.footer-container a {
+    color: #eddea3;
+    align-items: right;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    color: #eddea3;
+}

@@ -121,8 +121,7 @@ const Cart = () => {
             <TextField id="outlined-basic" name="adress" value={formValue.adress} label="Dirección de entrega: " variant="outlined" onChange={handleChange}/>
             <input type="submit" value="Enviar" />
         </form>
-            )}
-            
+            )}            
         </Modal>
     </Container>
     )

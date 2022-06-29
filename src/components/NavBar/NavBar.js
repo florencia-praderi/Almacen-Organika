@@ -58,7 +58,7 @@ const NavBar = ()=>{
                             })}
                         </Menu>
                         <Button color='secondary'>
-                            <Link to={'/contact'} className='btn-navbar'>Contact</Link></Button>                                     
+                            <Link to={'/contact'} className='btn-navbar'>Find Us</Link></Button>                                     
                     </div>
                     <Typography sx={{ flexGrow: 2}}>
                         <Button className='btn-cart' >
