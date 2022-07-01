@@ -10,7 +10,8 @@ const ItemDetail = ({data}) => {
         </div>
         <h2>{data.title}</h2>
         <span>$ {data.price}</span>      
-        <p> {data.description}</p>      
+        <p> {data.description}</p>  
+        <p> {data.cantidad} </p>    
         
         <div className='count-item'>
             <ItemCount data={data}/>

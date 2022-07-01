@@ -41,12 +41,15 @@
 
 .detail-btn {
     font-family: 'Dosis', sans-serif;
+    font-size: 15px;
     text-transform: none;
-    text-decoration: none;
-    font-weight: bold;
-    background-color: #71996a;
+    background-color: #704f46;
     color: #eddea3;
-    width: 100%;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px;
 }
 
 .card-item-btn {

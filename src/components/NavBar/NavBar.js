@@ -22,8 +22,7 @@ const NavBar = ()=>{
         setAnchorEl(null);
     };
 
-    const categories = ["Especias", "Condimentos", "Aromáticas"]
-
+    const categories = ["especias", "condimentos", "aromaticas"]
 
     return (
             <AppBar position="static">
@@ -43,7 +42,7 @@ const NavBar = ()=>{
                             disableRipple
                             style={{ backgroundColor: 'transparent', color: '#eddea3' }} 
                             variant='text' 
-                            className='btn-navbar'>Shop</Button>
+                            ><Link to={'/shop'} className='btn-navbar'>Shop</Link></Button>
                         <Menu
                             id="basic-menu"
                             anchorEl={anchorEl}

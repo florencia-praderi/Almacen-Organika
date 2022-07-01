@@ -54,6 +54,7 @@ const CartWidget = () =>{
                         <div className='cart-prod__info'>
                             <p>{item.title}</p>
                             <span>$ {item.price}</span>
+                            <p>{item.cantidad}</p>
                         </div>
                         <div className='cart-prod__action'>
                             <button onClick={() => {

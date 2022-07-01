@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useContext, useState } from "react"
-import { Container, Button } from "@mui/material"
+import { Container, Button, Alert, AlertTitle } from "@mui/material"
 import { Delete } from "@mui/icons-material"
 import CartContext from "../components/context/CartContext"
 import { Link } from "react-router-dom"
@@ -44,6 +44,16 @@ const Cart = () => {
     const handleChange = (e)=>{
         setFormValue({...formValue, [e.target.name]: e.target.value })
     }
+    
+    const confirmOrder = ()=>{
+        if (totalPrice == 0){
+            console.log("No hay productos en el carrito")
+            finishOrder()
+        }
+        else {
+            setShowModal(true)
+        }
+    }
 
     const finishOrder = ()=>{
         navigate ('/')
@@ -69,7 +79,7 @@ const Cart = () => {
                 <h2>Quitar</h2>
             </div>
             {cartListItems.map( (item) => {
-                const {id, title, image, price} = item
+                const {id, title, image, price, cantidad} = item
                 return(
                     <div className='cart-table__content' key={id}>
                         <div>
@@ -82,7 +92,7 @@ const Cart = () => {
                             <p>$ {price}</p>
                         </div>
                         <div className='cart-table__content-quantity'>
-                            <p>1</p>
+                            <p>{cantidad}</p>
                         </div>
                         <div className='cart-table__content-price'>
                             <button className='btn-delete' onClick={()=>deleteProduct(item)}>
@@ -103,15 +113,18 @@ const Cart = () => {
                         <p>Total</p>
                         <span>$ {totalPrice}</span>
                     </div>
-                    <Button className='btn-custom' onClick={() => setShowModal(true)}>Finalizar Compra</Button>
+                    <Button className='btn-custom' onClick={() => {confirmOrder()}}>Finalizar Compra</Button>
                 </div>
             </div>
         </div>
         <Modal title={ success? "Compra realizada con éxito!" : "Completa tus datos"} open={showModal} handleClose={() => setShowModal(false)}>
             {success ? (
                 <div>
-                    <p>Compra existosa! Número de orden: {success}</p>
-                    <button onClick={finishOrder} className='btn-custom'>Aceptar</button>
+                    <Alert severity="success">
+                        <AlertTitle><strong>Compra existosa!</strong></AlertTitle>
+                        Número de orden: <strong>{success}</strong>
+                    <button onClick={finishOrder} className='btn-custom'>Aceptar</button>                        
+                    </Alert>
                 </div>
             ):(
                 <form className="contact_form" onSubmit={handleSubmit}>

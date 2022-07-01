@@ -7,13 +7,11 @@ import { Link } from 'react-router-dom'
 import CartContext from '../context/CartContext'
 import { useContext } from 'react';
 import Loader from '../Loader/Loader';
-import { ToastContainer, toast } from 'material-react-toastify';
-import 'material-react-toastify/dist/ReactToastify.css';
+
 
 //Functional component
 const CardItem = ({image, title, price, id})=> {
     const {addProductToCart} = useContext(CartContext)
-    const notify = () => toast.success("Producto añadido");
     
     return (
     <Card sx={{ minWidth: 275 }}>
@@ -24,16 +22,9 @@ const CardItem = ({image, title, price, id})=> {
             </div>
             <p>{title}</p>
             <span>$ {price}</span>      
-            <div>          
-            <Button variant='contained' className="card-item-btn" style={{backgroundColor: '#704f46'}} onClick={()=>{
-                addProductToCart({image, title, price, id});
-                notify()}}>
-            <ToastContainer />
-                Agregar al carrito
-            </Button>
-            </div><span></span>   
+            <span></span>   
             <div>
-            <Button variant='contained' className="detail-btn" style={{backgroundColor: '#71996a'}}>
+            <Button variant='contained' className="detail-btn" style={{backgroundColor: '#71996a', borderRadius: '20px'}}>
                 <Link to={`/product/${id}`} style={{textDecoration: 'none', color: '#eddea3'}}>Detalle</Link>
             </Button>
             </div>

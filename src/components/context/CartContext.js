@@ -7,17 +7,22 @@ const CartProvider = ({children})=>{
     const [cartListItems, setCartListItems] = useState([])
     const [totalPrice, setTotalPrice] = useState(0)
 
-    const addProductToCart = (product) =>{
+    const addProductToCart = (product, cantidad) =>{
         let isInCart = cartListItems.find (cartItem=> cartItem.id === product.id)
         if (!isInCart){
             console.log("se agrego el producto:", product)
-            setTotalPrice(totalPrice +  product.price)
+            setTotalPrice(totalPrice +  product.price*product.cantidad)
             return setCartListItems(cartListItems=>[...cartListItems, product])
+        }
+        else {
+            isInCart.cantidad += product.cantidad
+            setCartListItems(cartListItems)
         }
     }
 
     const deleteProduct = (product) => {
         setCartListItems(cartListItems.filter( (cartProduct) => cartProduct.id !== product.id) )
+        setTotalPrice(totalPrice - product.price*product.cantidad)
         console.log("producto eliminado", product)
     }
 
