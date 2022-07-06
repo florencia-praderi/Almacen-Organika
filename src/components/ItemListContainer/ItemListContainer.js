@@ -30,7 +30,6 @@ const ItemListContainer = ()=>{
     //},[])
     return (
         <>
-        <CardList products={products}/>
         <Catalog />
         </>
     )

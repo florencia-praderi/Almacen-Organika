@@ -4,21 +4,17 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { Button } from '@mui/material';
 import { Link } from 'react-router-dom'
-import CartContext from '../context/CartContext'
-import { useContext } from 'react';
-import Loader from '../Loader/Loader';
 
 
 //Functional component
 const CardItem = ({image, title, price, id})=> {
-    const {addProductToCart} = useContext(CartContext)
     
     return (
     <Card sx={{ minWidth: 275 }}>
         <CardContent>
         <div className='card-item'>
             <div>
-                <img src={`./images/${image}`}/>
+                <img src={`/${image}`}/>
             </div>
             <p>{title}</p>
             <span>$ {price}</span>      

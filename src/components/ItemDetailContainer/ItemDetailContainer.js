@@ -10,7 +10,7 @@ const ItemDetailContainer = () => {
     const [product, setProduct] = useState({})
 
     useEffect (()=>{
-        getProduct()
+        getProduct(id)
         .then((prod)=>{
             setProduct(prod)
         })
@@ -32,7 +32,7 @@ const ItemDetailContainer = () => {
 
     return(
         <>
-        {product && <ItemDetail data={product}/>}
+        {<ItemDetail data={product}/>}
         </>
     )
 }

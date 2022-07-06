@@ -14,6 +14,15 @@ const FindUs = ()=>{
                 <li>Unicenter Shopping, nivel 3, local 6 - Tel.: 2606 03 80</li>
                 </ul>
             </div>
+        <div className='suscribe_container'>
+            <h2>¡Suscríbete a nuestra newsletter y déjate inspirar!</h2>
+            <h4>Ofertas exclusivas y noticias especiadas</h4>
+            <form className='contact_form'>
+            <TextField id="filled-basic" name="name" value='' label="Nombre y apellido: " variant="filled"/>
+            <TextField id="outlined-basic" name="email" value='' label="Mail: " variant="outlined"/>
+            <input type="submit" value="Suscríbete al boletín" />
+            </form>
+        </div>
         </>
     )
 }

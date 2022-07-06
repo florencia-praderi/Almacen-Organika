@@ -44,9 +44,10 @@
   background-color: #704f46;
   width: 100%;
   font-family: 'Zen Loop';
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   color: #ede6e4;
+  text-decoration: none;
 }
 .banner-header:hover{
   cursor: pointer;
@@ -84,11 +85,6 @@
   padding: 10px;
   cursor: pointer;
   margin: 10px;
-}
-
-.home-btn:hover{
-  cursor: pointer;
-  border: 2px solid #71996a;
 }
 
 .help-btn {
@@ -173,6 +169,14 @@
   font-family: 'Dosis', sans-serif;
   color: #704f46;
 }
+
+.suscribe_container {
+  background-color: #eddea3;
+  padding: 6px;
+  margin: auto;
+  color: #704f46;
+}
+
 
 .contact_container {
   display: flex;

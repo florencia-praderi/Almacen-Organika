@@ -6,13 +6,11 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 const Footer = ()=>{
     return (
         <div className='footer-container'>
-        <div className='footer-info '>
-            <h3>info@almacenorganika.com</h3>
-        </div>
-        <footer>
-            <a href='http://www.facebook.com'><FacebookIcon></FacebookIcon></a>
-            <a href='http://www.instagram.com'><InstagramIcon></InstagramIcon></a>
-            <a href='http://www.twitter.com'><TwitterIcon></TwitterIcon></a>
+        <footer>            
+            <div>info@almacenorganika.com</div>
+            <a href='http://www.facebook.com'><FacebookIcon/></a>
+            <a href='http://www.instagram.com'><InstagramIcon/></a>
+            <a href='http://www.twitter.com'><TwitterIcon/></a>
         </footer>
         </div>
     )

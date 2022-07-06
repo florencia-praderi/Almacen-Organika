@@ -12,7 +12,7 @@ const Catalog = ()=>{
         setProducts([])
         getProducts()
         .then ((productos)=>{
-            category ? filterFirebase() : setProducts(productos)
+            category ? filterByCategory (productos, category) : setProducts(productos)
         })
     }, [category])
 
@@ -26,24 +26,12 @@ const Catalog = ()=>{
         return catalog
     }
 
-    //const filterByCat = (array)=>{
-    //    return array.find((item)=>{
-    //        if (item.category == category){
-    //            return setProducts(products => [...products, item])
-    //        }
-    //    })
-    //}
-
-    const filterFirebase = async () => {
-        const productRef = collection(db, 'productos')
-        const queryResult = query(productRef, where("category", "==", category));
-        const querySnapshot = await getDocs(queryResult);
-        const catalog = querySnapshot.docs.map((doc) => {
-            let product = doc.data()
-            product.id = doc.id
-            return product
+    const filterByCategory = (array)=>{
+        return array.map((item)=>{
+            if (item.category == category){
+                return setProducts(products => [...products, item])
+            }
         })
-        return setProducts(catalog)
     }
 
     return (

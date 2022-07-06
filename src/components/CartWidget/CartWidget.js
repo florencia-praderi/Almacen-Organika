@@ -6,13 +6,10 @@ import MenuItem from '@mui/material/MenuItem';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { Link } from 'react-router-dom';
 import { Button } from '@mui/material';
-import { ToastContainer, toast } from 'material-react-toastify';
-import 'material-react-toastify/dist/ReactToastify.css';
 
 const CartWidget = () =>{
     const {cartListItems, deleteProduct} = useContext(CartContext)
     const [anchorEl, setAnchorEl] = useState(null);
-    const notify = () => toast.error("Producto eliminado");
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
@@ -42,14 +39,14 @@ const CartWidget = () =>{
                 {cartListItems.length === 0 && (
                     <>
                         <p>No hay productos agregados al carrito</p>
-                        <Link to="/shop">Empezar a comprar</Link>
+                        <Link to="/products">Empezar a comprar</Link>
                     </>
                 )}
                 {cartListItems.map( (item) => {
                     return(
                     <div className='item-cart-prod' key={item.id}>
                         <div className='cart-prod__image'>
-                            <img src={`/images/${item.image}`} alt="prod carrito" />
+                            <img src={`/${item.image}`} alt="prod carrito" />
                         </div>
                         <div className='cart-prod__info'>
                             <p>{item.title}</p>
@@ -57,18 +54,11 @@ const CartWidget = () =>{
                             <p>{item.cantidad}</p>
                         </div>
                         <div className='cart-prod__action'>
-                            <button onClick={() => {
-                                deleteProduct(item);
-                                notify()}}>
+                            <button onClick={() => deleteProduct(item)}>
                                 <DeleteIcon />
-                                <ToastContainer />
                             </button>
                         </div>
-                        <div className='cart-checkout-details'>
-                            <Button style={{cursor: 'pointer'}} onClick={handleClose}>
-                                <Link to="/cart" style={{textDecoration: 'none', color: 'white'}}>Terminar compra</Link>
-                            </Button>
-                        </div>
+
                     </div>
                     )
                 })}

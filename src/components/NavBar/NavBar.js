@@ -42,20 +42,20 @@ const NavBar = ()=>{
                             disableRipple
                             style={{ backgroundColor: 'transparent', color: '#eddea3' }} 
                             variant='text' 
-                            ><Link to={'/shop'} className='btn-navbar'>Shop</Link></Button>
-                        <Menu
-                            id="basic-menu"
-                            anchorEl={anchorEl}
-                            open={open}
-                            onClose={handleClose}
-                            MenuListProps={{
-                            'aria-labelledby': 'basic-button',
-                            }}
-                        >
-                            {categories.map( (cat) => {
-                                return <MenuItem onClick={handleClose}><Link to={`/products/${cat}`} className='btn-navbar'>{cat}</Link></MenuItem>
-                            })}
-                        </Menu>
+                            ><Link to={'/products'} className='btn-navbar'>Shop</Link></Button>
+                            <Menu
+                                id="basic-menu"
+                                anchorEl={anchorEl}
+                                open={open}
+                                onClose={handleClose}
+                                MenuListProps={{
+                                'aria-labelledby': 'basic-button',
+                                }}
+                            >
+                                {categories.map( (cat) => {
+                                    return <MenuItem onClick={handleClose}><Link to={`/products/${cat}`} className='btn-navbar'>{cat}</Link></MenuItem>
+                                })}
+                            </Menu>
                         <Button color='secondary'>
                             <Link to={'/contact'} className='btn-navbar'>Find Us</Link></Button>                                     
                     </div>

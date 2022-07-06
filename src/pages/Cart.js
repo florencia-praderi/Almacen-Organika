@@ -83,7 +83,7 @@ const Cart = () => {
                 return(
                     <div className='cart-table__content' key={id}>
                         <div>
-                            <img src={`./images/${image}`} />
+                            <img src={`/${image}`} />
                         </div>
                         <div className='cart-table__content-title'>
                             <p>{title}</p>
@@ -103,7 +103,7 @@ const Cart = () => {
                 )
             })}
             <div className='cart-footer'>
-                <Button><Link to={'/shop'} className='btn-custom' style={{textDecoration: 'none'}}>Continuar comprando</Link></Button>
+                <Button><Link to={'/products'} className='btn-custom' style={{textDecoration: 'none'}}>Continuar comprando</Link></Button>
                 <div className='cart-checkout-details'>
                     <div className='cart-checkout__subtotal'>
                         <p>Subtotal</p>
@@ -113,7 +113,7 @@ const Cart = () => {
                         <p>Total</p>
                         <span>$ {totalPrice}</span>
                     </div>
-                    <Button className='btn-custom' onClick={() => {confirmOrder()}}>Finalizar Compra</Button>
+                    <Button className='btn-custom' onClick={() => {confirmOrder()}} style={{marginBottom: '3px'}}>Finalizar Compra</Button>
                 </div>
             </div>
         </div>

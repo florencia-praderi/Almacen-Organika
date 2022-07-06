@@ -8,7 +8,6 @@ import Catalog from './pages/Catalog'
 import NotFound from './pages/NotFound'
 import FindUs from './pages/FindUs'
 import Cart from './pages/Cart'
-import Shop from './pages/Shop'
 import { CartProvider } from './components/context/CartContext';
 import Footer from './components/Footer/Footer';
 
@@ -21,7 +20,7 @@ function App() {
       <NavBar/>   
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/shop' element={<Shop/>}/>
+        <Route path='/products' element={<Catalog/>}/>
         <Route path='/product/:id' element={<Detail/>}/>
         <Route path='/products/:category' element={<Catalog/>}/>
         <Route path='/contact' element={<FindUs/>}/>
