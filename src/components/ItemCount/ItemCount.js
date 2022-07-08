@@ -33,13 +33,13 @@ const ItemCount = ({data})=>{
         </div>     
         <div className='count-item'> 
             {!showButton ? 
-            <Button variant='contained' style={{backgroundColor: '#704f46', borderRadius: '20px'}} onClick={()=>{
+            <Button variant='contained' style={{backgroundColor: '#704f46', borderRadius: '20px', color: '#eddea3'}} onClick={()=>{
                 addToCart(data)}}>
                 Agregar producto
             </Button>
             :
             <Button variant='outlined' style={{backgroundColor: '#704f46', borderRadius: '20px'}}>
-                <Link to={'/cart'} style={{color: 'white', textDecoration: 'none'}}>Finalizar compra</Link>
+                <Link to={'/cart'} style={{color: '#eddea3', textDecoration: 'none'}}>Finalizar compra</Link>
             </Button>
             }
         </div>  

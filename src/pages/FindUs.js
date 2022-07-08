@@ -15,7 +15,7 @@ const FindUs = ()=>{
                 </ul>
             </div>
         <div className='suscribe_container'>
-            <h2>¡Suscríbete a nuestra newsletter y déjate inspirar!</h2>
+            <h3>¡Suscríbete a nuestra newsletter y déjate inspirar!</h3>
             <h4>Ofertas exclusivas y noticias especiadas</h4>
             <form className='contact_form'>
             <TextField id="filled-basic" name="name" value='' label="Nombre y apellido: " variant="filled"/>
